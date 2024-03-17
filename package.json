@@ -11,14 +11,21 @@
     "logs": "firebase functions:log"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "firebase-admin": "^9.4.2",
     "firebase-functions": "^3.13.1",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard": "^17.1.0",
     "firebase-functions-test": "^0.2.3",
-    "firebase-tools": "^9.3.0"
+    "firebase-tools": "^9.3.0",
+    "prettier": "^3.2.5"
   }
 }
