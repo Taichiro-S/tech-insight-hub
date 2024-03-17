@@ -11,11 +11,8 @@
   },
   "functions": {
     "source": ".",
-    "predeploy": [
-      "npm --prefix \"$PROJECT_DIR\" install",
-      "npm --prefix \"$PROJECT_DIR\" run build"
-    ],
-    "runtime": "nodejs16"
+    "predeploy": ["npm --prefix \"$PROJECT_DIR\" install", "npm --prefix \"$PROJECT_DIR\" run build"],
+    "runtime": "nodejs18"
   },
   "emulators": {
     "auth": {
