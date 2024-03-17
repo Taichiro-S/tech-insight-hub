@@ -8,7 +8,12 @@
     "serve": "npm run build && firebase emulators:start --only functions,hosting",
     "shell": "npm run build && firebase functions:shell",
     "deploy": "firebase deploy --only functions,hosting",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "lint": "next lint",
+    "markuplint": "markuplint \"./**/*.tsx\"",
+    "secretlint": "secretlint --maskSecrets --secretlintignore .gitignore '**/*'",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "axios": "^1.6.7",
@@ -20,13 +25,31 @@
     "xml2js": "^0.6.2"
   },
   "devDependencies": {
+    "@markuplint/jsx-parser": "^4.3.0",
+    "@markuplint/react-spec": "^4.1.0",
+    "@secretlint/secretlint-rule-preset-recommend": "^8.1.2",
+    "@types/node": "^20.11.28",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "autoprefixer": "^10.4.18",
     "dotenv": "^16.4.5",
     "eslint": "^8.57.0",
+    "eslint-config-next": "^14.1.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
-    "eslint-config-next": "^14.1.3",
+    "eslint-plugin-tailwindcss": "^3.14.1",
+    "eslint-plugin-unused-imports": "^3.0.0",
     "firebase-functions-test": "^0.2.3",
     "firebase-tools": "^13.5.1",
-    "prettier": "^3.2.5"
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "markuplint": "^4.3.0",
+    "postcss": "^8.4.35",
+    "prettier": "^3.2.5",
+    "secretlint": "^8.1.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.2"
   }
 }
